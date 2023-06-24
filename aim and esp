@@ -315,3 +315,83 @@ RunService.RenderStepped:Connect(function()
     end
 end)
 end)
+-----
+local Tab = Window:NewTab("TP")
+local Section = Tab:NewSection("TP")
+Section:NewButton("Harbour", "ButtonInfo", function()
+    local args = {
+        [1] = "Teleport",
+        [2] = {
+            [1] = "Harbour",
+            [2] = ""
+        }
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("Event"):FireServer(unpack(args))
+    
+end)
+Section:NewButton("Carrier", "ButtonInfo", function()
+    local args = {
+        [1] = "Teleport",
+        [2] = {
+            [1] = "Carrier",
+            [2] = "",
+            [3] = 0
+        }
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("Event"):FireServer(unpack(args))
+    
+end)
+Section:NewButton("Battleship", "ButtonInfo", function()
+    local args = {
+        [1] = "Teleport",
+        [2] = {
+            [1] = "Battleship",
+            [2] = "",
+            [3] = 0
+        }
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("Event"):FireServer(unpack(args))
+    
+end)
+Section:NewButton("TP A", "ButtonInfo", function()
+    local args = {
+        [1] = "Teleport",
+        [2] = {
+            [1] = "Island",
+            [2] = "A",
+            [3] = 0
+        }
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("Event"):FireServer(unpack(args))
+    
+end)
+Section:NewButton("TP B", "ButtonInfo", function()
+    local args = {
+        [1] = "Teleport",
+        [2] = {
+            [1] = "Island",
+            [2] = "B",
+            [3] = 0
+        }
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("Event"):FireServer(unpack(args))
+    
+end)
+Section:NewButton("TP C", "ButtonInfo", function()
+    local args = {
+        [1] = "Teleport",
+        [2] = {
+            [1] = "Island",
+            [2] = "C",
+            [3] = 0
+        }
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("Event"):FireServer(unpack(args))
+    
+end)
